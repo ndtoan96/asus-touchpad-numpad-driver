@@ -200,7 +200,7 @@ numlock: bool = False
 pos_x: int = 0
 pos_y: int = 0
 button_pressed: libevdev.const = None
-brightness: int = 0
+brightness: int = 2
 
 while True:
     # If touchpad sends tap events, convert x/y position to numlock key and send it #
@@ -281,7 +281,7 @@ while True:
                 # skip invalid row and col values
                 log.debug('Unhandled col/row %d/%d for position %d-%d', col, row, x, y)
                 continue
-            
+
             if button_pressed == EV_KEY.KEY_5:
                 button_pressed = percentage_key
 
